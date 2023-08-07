@@ -10,10 +10,16 @@ function fibs(num) {
         second = sum;
         fibs.push(sum);
     };
-    console.log(fibs);
-    return fibs;
+    
+    if (num === 1) {
+        console.log([first]);
+        return [first];
+    } else {
+        console.log(fibs);
+        return fibs;
+    };
 };
 
 fibs(10);
 
-// node fibonacci.js
+// VSCode Instructions: Input a positive number in fibs(), run terminal command: node fibonacci.js 
