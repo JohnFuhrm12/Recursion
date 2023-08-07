@@ -23,11 +23,10 @@ function fibsRec(num) {
     if (num == 1) {
         return [0, 1];
     };
-    
+
     const arr = fibsRec(num - 1);
     return [...arr, arr[num - 1] + arr[num - 2]];
-  }
-  
+};
 
 console.log(fibs(10));
 console.log(fibsRec(10));
