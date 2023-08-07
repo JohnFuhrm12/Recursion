@@ -12,14 +12,24 @@ function fibs(num) {
     };
     
     if (num === 1) {
-        console.log([first]);
         return [first];
     } else {
-        console.log(fibs);
         return fibs;
     };
 };
 
-fibs(10);
 
-// VSCode Instructions: Input a positive number in fibs(), run terminal command: node fibonacci.js 
+function fibsRec(num) {
+    if (num == 1) {
+        return [0, 1];
+    };
+    
+    const arr = fibsRec(num - 1);
+    return [...arr, arr[num - 1] + arr[num - 2]];
+  }
+  
+
+console.log(fibs(10));
+console.log(fibsRec(10));
+
+// VSCode Instructions: Input a positive number in fibs()/fibsRec(), run terminal command: node fibonacci.js 
